@@ -1,0 +1,27 @@
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+body {
+  font-family: serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Naskh Arabic", serif;
+}
+.navbar-brand {
+  width: 200px;
+}
+.custom-shadow {
+  text-shadow: 2px 2px 8px rgb(10, 10, 10);
+}
+.card-img-overlay p {
+  margin-bottom: 0;
+}
