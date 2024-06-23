@@ -23,9 +23,9 @@ This is a News Website that includes the latest news and news categories. All ne
   </tr>
 </table>
 
-<!-- ## Links
+## Links
 
-- Live Site URL: [Netlify](https://stratbootstrap-creativetemplate-alyaa.netlify.app/) -->
+- Live Site URL: [Netlify](https://newsapp-gnewsapi-alyaaahmed.netlify.app/)
 
 ## Templates and APIs
 
