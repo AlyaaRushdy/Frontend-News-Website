@@ -28,7 +28,8 @@ async function showNews() {
 
     card.innerHTML = `
       <div class="card h-100">
-        <img src="${news[i].image}" alt="${news[i].title}" class="w-100 h-100 card-img "/>
+        <img src="${news[i].image}" alt="${news[i].title}" class="w-100 h-100 card-img"
+        onerror="this.onerror=null;this.src='./images/alt image.jpg'"/>
         <div class="card-img-overlay align-content-end" style="background-color:rgba(0,0,0,.4)">
           <p class="card-text">
             <small
@@ -49,16 +50,30 @@ async function showNews() {
   for (const article of news) {
     let publishDate = new Date(article.publishedAt).toLocaleDateString();
     const card = document.createElement("div");
-    card.classList.add("col");
+    card.classList = "col";
+    // col-12 col-sm-6 col-md-4
     card.innerHTML = `
         <div class="card shadow-sm">
-          <a href="${article.url}" target="_blank"><img src="${article.image}" alt="" class="w-100 card-img-top" /></a>
+          <a href="${article.url}" target="_blank">
+            <img src="${
+              article.image ? article.image : "./images/alt image.jpg"
+            }" alt="${article.title}" class="w-100 card-img-top"
+            onerror="this.onerror=null;this.src='./images/alt image.jpg'"  />
+          </a>
           <div class="card-body">
-            <h2 class=" h3"><a href="${article.url}" target="_blank" class="card-title link-underline-dark link-underline-opacity-0 link-underline-opacity-100-hover">${article.title}</a></h2>
+            <h2 class=" h3"><a href="${
+              article.url
+            }" target="_blank" class="card-title link-underline-dark link-underline-opacity-0 link-underline-opacity-100-hover">${
+      article.title
+    }</a></h2>
             <p class="card-text w-100">${article.description}</p>
-            <a href="${article.url}" class="text-decoration-none btn btn-outline-dark mb-2">اقرا المزيد</a>
+            <a href="${
+              article.url
+            }" class="text-decoration-none btn btn-outline-dark mb-2">اقرا المزيد</a>
             <div class="d-flex justify-content-between align-items-baseline">
-              <p> المصدر: <a href="${article.source.url}" target="_blank">${article.source.name}</a></p>
+              <p> المصدر: <a href="${article.source.url}" target="_blank">${
+      article.source.name
+    }</a></p>
               <small
                 class="text-body-secondary"
                 aria-details="date"
